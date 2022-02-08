@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            p {
+                color: red;
+            }
+        </style>
+        <title>SET08101 - Interacting with the DOM</title>
+    </head>
+    <body>
+        <p><a href="#" onClick="colourChanger();">Click Me!</a></p>
+        <h1>OUTPUT:</h1>
+        <p id="redPara">I am RED</p>
+
+        <script>
+            let current = "red";
+
+            function colourChanger() {
+                if (current === "red") {
+                    document.getElementById("redPara").style.color = "blue";
+                    document.getElementById("redPara").innerHTML = "I am BLUE";
+                    current = "blue";
+                } else if (current === "blue") {
+                    document.getElementById("redPara").style.color = "green";
+                    document.getElementById("redPara").innerHTML = "I am GREEN";
+                    current = "green";
+                } else if (current === "green") {
+                    document.getElementById("redPara").style.color = "orange";
+                    document.getElementById("redPara").innerHTML = "I am Orange";
+                    current = "orange";
+                } else if (current === "orange") {
+                    document.getElementById("redPara").style.color = "red";
+                    document.getElementById("redPara").innerHTML = "I am RED";
+                    current = "red";
+                }
+            }
+            /*Clicking on "Click Me! changes the colour and text in the <p> tag*/
+        </script>
+    </body>
+</html>
